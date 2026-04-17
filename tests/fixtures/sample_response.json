@@ -1,0 +1,38 @@
+{
+  "resultCount": 3,
+  "results": [
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistName": "Pink Floyd",
+      "collectionName": "The Wall",
+      "trackName": "Comfortably Numb",
+      "releaseDate": "1979-11-30T08:00:00Z",
+      "trackPrice": 1.29,
+      "currency": "USD",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/example1.m4a"
+    },
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistName": "Pink Floyd",
+      "collectionName": "Wish You Were Here",
+      "trackName": "Wish You Were Here",
+      "releaseDate": "1975-09-12T07:00:00Z",
+      "trackPrice": 1.29,
+      "currency": "USD",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/example2.m4a"
+    },
+    {
+      "wrapperType": "track",
+      "kind": "song",
+      "artistName": "Pink Floyd",
+      "collectionName": "The Dark Side of the Moon",
+      "trackName": "Money",
+      "releaseDate": "1973-03-01T08:00:00Z",
+      "trackPrice": 1.29,
+      "currency": "USD",
+      "previewUrl": null
+    }
+  ]
+}

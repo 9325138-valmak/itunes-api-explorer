@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 import pytest
+import requests
 import responses as rsps
 
 from itunes_explorer.client import ItunesAPIError, search
@@ -59,3 +60,14 @@ def test_raises_on_invalid_limit() -> None:
 
     with pytest.raises(ValueError, match="limit must be 1–200"):
         search("test", limit=201)
+
+
+@rsps.activate
+def test_raises_on_timeout() -> None:
+    rsps.add(
+        rsps.GET,
+        "https://itunes.apple.com/search",
+        body=requests.Timeout(),
+    )
+    with pytest.raises(ItunesAPIError, match="timed out"):
+        search("anything")

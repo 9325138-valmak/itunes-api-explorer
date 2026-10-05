@@ -55,7 +55,8 @@ def search(
     except requests.Timeout:
         raise ItunesAPIError(f"Request timed out after {DEFAULT_TIMEOUT}s")
     except requests.HTTPError as exc:
-        raise ItunesAPIError(f"HTTP {exc.response.status_code}: {exc}") from exc
+        status = exc.response.status_code if exc.response is not None else "error"
+        raise ItunesAPIError(f"HTTP {status}: {exc}") from exc
     except requests.RequestException as exc:
         raise ItunesAPIError(f"Request failed: {exc}") from exc
 
